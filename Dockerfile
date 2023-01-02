@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.10-slim
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -12,15 +12,14 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
-COPY requirements.txt .
-RUN pip install --upgrade pip
-RUN pip install streamlit
+RUN pip install --upgrade pip && \
+    pip install streamlit
 
 # Copy the application code
 COPY source /app
 
 # Set the working directory
-WORKDIR app
+WORKDIR /app
 
 USER nobody
 

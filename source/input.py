@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import base64
-import algos.fcfs as fcfs
-import algos.sjf as sjf
-import algos.srtf as srtf
+import algorithms.fcfs as fcfs
+import algorithms.sjf as sjf
+import algorithms.srtf as srtf
 
 algorithms=["FCFS - First come first serve","SJF - Shortest Job First", "SRTF - Shortest Remaining Time First"]
 
